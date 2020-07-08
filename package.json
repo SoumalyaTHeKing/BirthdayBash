@@ -1,0 +1,24 @@
+{
+  "name": "birthday-bash",
+  "version": "1.0.0",
+  "description": "chetna's birthday gift",
+  "main": "index.html",
+  "scripts": {
+    "start":"npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite":"lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SoumalyaTHeKing/BirthdayBash.git"
+  },
+  "author": "Soumalya Bhattacharya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SoumalyaTHeKing/BirthdayBash/issues"
+  },
+  "homepage": "https://github.com/SoumalyaTHeKing/BirthdayBash#readme",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  }
+}
