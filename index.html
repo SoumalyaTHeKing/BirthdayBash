@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="refresh" content="70;url=video.html"/>
     <title>Document</title>
+     <!--build:css css/main.css-->
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="./smoke.css">
@@ -14,6 +15,7 @@
             background: #262626;
         }
     </style>
+    <!--endbuild-->
 </head>
 <body>
     <div id="particles-js">
@@ -23,6 +25,7 @@
         <h2 class="type"></h2>
         <video src="./Editor.mp4" muted loop autoplay type="mp4"></video>
     </section>
+    <!--build:js js/main.js-->
     <script  src="./particles.js"></script>
     <script  src="./app.js"></script>
     <script src="./node_modules/typed.js/lib/typed.js"></script>
@@ -38,5 +41,6 @@
         loop: true,
     });
     </script>
+    <!--endbuild-->
 </body>
 </html>
