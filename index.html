@@ -3,11 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="70;url=video.html"/>
     <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./smoke.css">
+    <style>
+        body
+        {
+            background: #262626;
+        }
+    </style>
 </head>
 <body>
-    <div id="app"></div>
+    <div id="particles-js">
+    <spam id="app"></span>
+    </div>
+    <section id="wish">
+        <h2 class="type"></h2>
+        <video src="./Editor.mp4" muted loop autoplay type="mp4"></video>
+    </section>
+    <script  src="./particles.js"></script>
+    <script  src="./app.js"></script>
+    <script src="./node_modules/typed.js/lib/typed.js"></script>
+    <script src="./node_modules/popper.js/dist/popper.min.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="./index.js"></script>
+    <script>
+        var typed = new Typed('.type', {
+        strings: ['Happy Birthday ^1000','Chetna'],
+        typeSpeed:70,
+        backSpeed:50,
+        loop: true,
+    });
+    </script>
 </body>
 </html>

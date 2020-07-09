@@ -1,7 +1,7 @@
 const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 30;
 const ALERT_THRESHOLD = 10;
-
+console.clear();
 const COLOR_CODES = {
   info: {
     color: "green"
@@ -18,6 +18,7 @@ const COLOR_CODES = {
 
 const TIME_LIMIT = 60;
 let timePassed = 0;
+let nextSlide=0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
 let remainingPathColor = COLOR_CODES.info.color;
@@ -50,6 +51,9 @@ startTimer();
 
 function onTimesUp() {
   clearInterval(timerInterval);
+  setTimeout(() => {
+    nextCall();
+  }, 1000);
 }
 
 function startTimer() {
@@ -65,8 +69,8 @@ function startTimer() {
     if (timeLeft === 0) {
       onTimesUp();
     }
-  }, 1000);
-}
+  },1000);
+  }
 
 function formatTime(time) {
   const minutes = Math.floor(time / 60);
@@ -75,7 +79,6 @@ function formatTime(time) {
   if (seconds < 10) {
     seconds = `0${seconds}`;
   }
-
   return `${minutes}:${seconds}`;
 }
 
@@ -111,3 +114,32 @@ function setCircleDasharray() {
     .getElementById("base-timer-path-remaining")
     .setAttribute("stroke-dasharray", circleDasharray);
 }
+function nextCall()
+  {
+    $('#particles-js').css('display','none');
+    $('body').css('background','transparent');
+    $('#app').css('display','none');
+    $('#gallery').css('display','none');
+    $('#wish').css('display','flex');
+    $('#wish').css('overflow','hidden');
+    setTimeout(function()
+{ 
+    $('#wish').fadeOut();
+}, 60000);
+  }
+$(document).ready(function()
+{
+  if(nextSlide==0)
+{
+  //$('body').css('background','rgb(0,18,30');
+  $('#wish').css('display','none');
+  $('#gallery').css('display','none');
+  $('#app').css('overflow','hidden');
+  setTimeout(function()
+{ 
+    $('#app').fadeOut();
+    $('#wish').fadeIn();
+}, 60000);
+}
+
+});
